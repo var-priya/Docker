@@ -1,0 +1,13 @@
+git clone <repo URL>
+ls
+cd app
+ls
+cat Dockerfile
+sudo apt-get update && sudo apt-get install docker.io
+sudo docker build . -t local-image
+sudo docker login
+sudo docker run -dp localport:hostport local-image:latest
+sudo docker image
+sudo docker tag local-image:latest dockerhub-repo-url:latest
+sudo docker images
+sudo docker push dockerhub-repo-url:latest
